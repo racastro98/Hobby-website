@@ -1,0 +1,61 @@
+.carouselExample {
+    float: center;
+}
+
+.carousel-item{
+    border-color: white;
+    border-style: ridge;
+    border-width: 2pt;
+}
+
+body {
+    background-color: rgb(93, 121, 102);
+    color: white;
+}
+
+.row {
+    border-bottom-color: white, 2px;
+    border-bottom-style: dashed;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.col {
+    padding: 15px;
+    text-align: center;
+}
+
+.topRow {
+    margin: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px;
+    background-color: rgb(93, 121, 102);
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    background-color: #546d5a;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #425246;
+}
