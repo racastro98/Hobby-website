@@ -29,33 +29,87 @@ body {
     margin: 10px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 1px;
-    background-color: rgb(93, 121, 102);
+.navbar {
+    padding: 0 15px;
 }
-
-li {
-    float: right;
+.menu>.menu-items {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
 }
-
-li a {
+.menu>.menu-items>a {
     display: block;
-    color: white;
-    background-color: #546d5a;
-    text-align: center;
-    padding: 14px 10px;
-    text-decoration: none;
+    padding: 12px 0;
+    font-size: 16px;
+    color: #000000;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
-
-li a:hover:not(.active) {
-    background-color: #ddd;
+.menu>.menu-items>a .plus {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    margin-left: 5px;
 }
-
-li a.active {
-    color: white;
-    background-color: #425246;
+.menu>.menu-items>a .plus::before,
+.menu>.menu-items>a .plus::after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    background-color: #000000;
+    height: 2px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+.menu>.menu-items:hover>a .plus::before,
+.menu>.menu-items:hover>a .plus::after {
+    background-color: #72A0C1;
+}
+.menu>.menu-items>a .plus::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+.menu>.menu-items>.sub-menu>.menu-items>a:hover,
+.menu>.menu-items:hover>a {
+    color: #72A0C1;
+}
+.menu>.menu-items>.sub-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: linear-gradient(90deg, #00D2FF 0%, #3A47D5 100%);
+    padding: 10px 0;
+    border-top: 3px solid #72A0C1;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+@media(min-width: 992px) {
+    .menu>.menu-items-has-children:hover>.sub-menu {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.menu>.menu-items-has-children:hover> a .plus::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+.menu>.menu-items>.sub-menu>.menu-items {
+    display: block;
+}
+.menu>.menu-items>.sub-menu>.menu-items>a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
 }

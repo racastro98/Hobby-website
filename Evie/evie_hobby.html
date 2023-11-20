@@ -29,22 +29,30 @@
             </div>
 
             <div class="col">
-                <div class="dropdown">
-                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Hobbies
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="index.html">Home</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="evie_hobby.html">Evie's Hobby</a>
-                        <a class="dropdown-item" href="#Hobby4">Puja's Hobby</a>
-                        <a class="dropdown-item" href="#Hobby4">Destiny's Hobby</a>
-                        <a class="dropdown-item" href="#Hobby4">Raquel's Hobby</a>
-                        <a class="dropdown-item" href="#Hobby4">Kayleigh's Hobby</a>
-                    </div>
-                </div>
-            
+                <!--Navigation bar-->
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="menu-items">
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li class="menu-items menu-items-has-children">
+                            <a href="#">Hobbies <i class="plus"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-items"><a href="evie_hobby.html">Evie</a></li>
+                                <li class="menu-items"><a href="#">Puja</a></li>
+                                <li class="menu-items"><a href="#">Destiny</a></li>
+                                <li class="menu-items"><a href="Raquel\Raquel.html">Raquel</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-items">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="menu-items">
+                            <a href="#">Get in touch</a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
 
@@ -117,24 +125,11 @@
                 <p>
                     Sign up for news about this hobby:
                 </p>
-                <form name="myForm" action="/action_page.php" method="post">
-                    <!-- onsubmit="return validateForm()" in line above to include JavaScript -->
-
-                    <p>Name: <input type="text" name="fname"></p>
-                    <p>Email: <input type="email" name="femail"></p>
-                    <p>Phone: <input type="text" name="fphone"></p>
-                    <input id="" type="submit" value="Submit">
-
+                <form onsubmit="submitFunction()">
+                    Name: <input type="text" name="name"><br>
+                    E-mail: <input type="text" name="email"><br>
+                    <input type="submit" value="Submit">
                 </form>
-                <!-- <script>
-                    function validateForm() {
-                        let x = document.forms["myForm"]["fname"].value;
-                        if (x == "") {
-                            alert("Name must be filled out");
-                            return false;
-                        }
-                    }
-                </script> -->
             </div>
         </div>
     </div>
