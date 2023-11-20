@@ -9,3 +9,33 @@ font-size: large;
 .topRow {
     margin: 10px;
 }
+
+div {
+    margin-bottom: 10px;
+ }
+
+.img-container:hover img{
+filter: brightness(70%);
+transition: 0.5s;
+}
+
+.img-container:hover .img-label{
+display: inline;
+transition: 0.5s;
+}.
+
+.img-container {
+position: relative;
+text-align: center;
+}
+
+.img-label {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+color: white;
+font-size: xx-large;
+font-weight: 500;
+}
