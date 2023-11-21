@@ -14,14 +14,13 @@ div {
     margin-bottom: 10px;
  }
 
-.img-container:hover img{
+.img-container:hover{
 filter: brightness(70%);
 transition: 0.5s;
 }
 
 .img-container:hover .img-label{
 display: inline;
-transition: 0.5s;
 }.
 
 .img-container {
